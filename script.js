@@ -10,18 +10,18 @@ function add() {
   const dayExists = nlwSetup.dayExists(today)
 
   if (dayExists) {
-    alert("Dia ja incluso 🔴")
+    alert("Dia já incluso 🔴")
     return
   }
 
-  alert("adicionado com sucesso ✅")
+  alert("Adicionado com sucesso ✅")
   nlwSetup.addDay(today)
 }
 
 function save() {
-  localStorage.setItem('NLWSetup@habits', JASON.stringify(nlwSetup.data))
+  localStorage.setItem("NLWSetup@habits", JSON.stringify(nlwSetup.data))
 }
 
-const data = JSON.parse(localStorage.getItem(NLWSetup@habits)) || {}
+const data = JSON.parse(localStorage.getItem("NLWSetup@habits")) || {}
 nlwSetup.setData(data)
 nlwSetup.load()
